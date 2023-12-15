@@ -33,6 +33,11 @@ body {
 	line-height: 1;
 }
 
+.intro-slide {
+	font-size: 2em;
+	color: #333;
+  }
+
 ol, ul {
 	list-style: none;
 }
