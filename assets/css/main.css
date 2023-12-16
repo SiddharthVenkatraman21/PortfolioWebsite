@@ -33,6 +33,14 @@ body {
 	line-height: 1;
 }
 
+#helloSlide {
+	font-size: 2em;
+	white-space: nowrap;
+	overflow: hidden;
+	height: 2em;
+	
+  }
+
 .intro-slide {
 	font-size: 2em;
 	color: #333;
