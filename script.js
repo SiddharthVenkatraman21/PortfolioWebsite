@@ -47,3 +47,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Start the typewriter effect with the default translation
     typeWriter(helloTranslations[translationIndex], 0, eraseText);
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const timelineEvents = document.querySelectorAll('.timeline-event');
+
+    timelineEvents.forEach(function (event) {
+      event.addEventListener('click', function () {
+        // Remove 'active' class from all events
+        timelineEvents.forEach(function (otherEvent) {
+          otherEvent.classList.remove('active');
+        });
+
+        // Add 'active' class to the clicked event
+        event.classList.add('active');
+      });
+    });
+  });

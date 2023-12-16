@@ -85,6 +85,64 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Timeline */
+
+
+
+.timeline {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .timeline-event {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	background-color: #3498db;
+	color: #fff;
+	border-radius: 50%;
+	margin: 0 20px;
+	cursor: pointer;
+	z-index: 1; /* Ensure events appear above the timeline */
+  }
+
+  .timeline-event.active {
+	background-color: #e74c3c;
+  }
+
+  .timeline-event:hover {
+	background-color: #2980b9;
+  }
+
+  .timeline-line {
+	position: absolute;
+	height: 4px;
+	background-color: #3498db;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 0; /* Ensure the line is behind the events */
+  }
+
+  .timeline-content {
+	display: none;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #3498db;
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+  }
+
+  .timeline-event.active .timeline-content {
+	display: block;
+  }
+
 /* Basic */
 
 	@-ms-viewport {
